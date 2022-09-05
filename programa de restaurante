@@ -1,3 +1,5 @@
+soma = 0
+Acumulador = 1
 #****************COMEÇO DA FUNÇÃO volumeFeijoada****************
 def volumefeijoada():
   while True:
@@ -6,14 +8,17 @@ def volumefeijoada():
       if volume_ml < 300 or volume_ml > 5000:
         print('não aceitamos porções menores que 300ml ou maiores que 5L\nDigite a porção novamente')
       elif volume_ml >=300 and volume_ml <= 5000:
-        valor_volume = volume_ml * 0.08
-        return 
+        return volume_ml * 0.08
     except ValueError:
       print('Opção invalida, tente novamente')
       continue
+  Acumulador += 1
+  Soma += 1    
 #****************FINAL DA FUNÇÃO volumeFeijoada****************
 
 #****************COMEÇO DA FUNÇÃO opcaoFeijoada*****************
+soma = 0
+Acumulador = 1
 def opcaofeijoada():
   while True:
     print('Digite a opção de feijoada:')
@@ -28,6 +33,8 @@ def opcaofeijoada():
     else:
       print('Opção não permitida, tente novamente')
       continue
+  Acumulador += 1
+  Soma += 1
       
 
 #****************FIM DA FUNÇÃO opcaoFeijoada********************
@@ -63,9 +70,9 @@ def acompanhamentofeijoada():
 #****************COMEÇO DA MAIN*********************************
 
 print('seja bem vindo ao restaurante de feijoada do william paulino mantovani isidoro')
-volumefeijoada()         #vai me retornar volumefeijoada
-opcaofeijoada()
-acompanhamentofeijoada()
+volume_ml = volumefeijoada()         #vai me retornar volumefeijoada
+opcao_fei = opcaofeijoada()
+acompanhamento = acompanhamentofeijoada()
 total = (volume_ml * opcao_fei) + acompanhamento
-print('{:.2f} e {} {} total de {}'.format(valor_volume, opcao_fei, acompanhamento, total))
+print('{:.2f} e {} {} total de {}'.format(volume_ml, opcao_fei, acompanhamento, total))
 #****************FIM DA MAIN************************************
