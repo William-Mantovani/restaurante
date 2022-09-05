@@ -35,15 +35,11 @@ def opcaofeijoada():
 soma = 0
 Acumulador = 1
 def acompanhamentofeijoada():
-  
   while True:
     print('Deseja mais acompanhamento? ')
     print('acompanhamento:\n| 0 - Não desejo mais acompanhamentos  |\n| 1 - 200g de arroz |\n| 2 - 150g de farofa especial |\n| 3 - 100g de couve cozida|\n| 4 - 1 laranja descascada |')
     acompanhamento = input('digite o acompanhamento: ')
-    segundo_ped = input('deseja outro pedido? (s/n): ')
-    if segundo_ped == 's': 
-      continue
-    elif acompanhamento == '0':
+    if acompanhamento == '0':
       break
     elif acompanhamento == '1':
       return 5.00
@@ -55,10 +51,11 @@ def acompanhamentofeijoada():
       return 3.00
     else:
       print('digitou errado')
-    Acumulador += 1
-    Soma += 1
+      continue
+  Acumulador += 1
+  Soma += 1
 
-  
+      
 
 #****************FIM DA FUNÇÃO acompanhamentoFeijoada***********
 
