@@ -8,7 +8,7 @@ def volumefeijoada():
       if volume_ml < 300 or volume_ml > 5000:
         print('não aceitamos porções menores que 300ml ou maiores que 5L\nDigite a porção novamente')
       elif volume_ml >=300 and volume_ml <= 5000:
-        return volume_ml * 0.08
+        return (volume_ml * 0.08)
     except ValueError:
       print('Opção invalida, tente novamente')
       continue
