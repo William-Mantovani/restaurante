@@ -62,9 +62,9 @@ def acompanhamentofeijoada():
 #****************COMEÇO DA MAIN*********************************
 
 print('seja bem vindo ao restaurante de feijoada do william paulino mantovani isidoro')
-porcao = volumefeijoada()         #vai me retornar volumefeijoada
-opcao = opcaofeijoada()
-acompanhamento = acompanhamentofeijoada()
+volumefeijoada()         #vai me retornar volumefeijoada
+opcaofeijoada()
+acompanhamentofeijoada()
 total = (porcao * opcao) + acompanhamento
 print('{:.2f} e {} {} total de {}'.format(porcao, opcao, acompanhamento, total))
 #****************FIM DA MAIN************************************
