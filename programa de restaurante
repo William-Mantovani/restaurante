@@ -49,19 +49,25 @@ def acompanhamentofeijoada():
     acompanhamento = input('digite o acompanhamento: ')
     if acompanhamento == '1':
       return 5.00
+      soma += 5.00
     elif acompanhamento == '2':
       return 6.00
+      soma += 6.00
     elif acompanhamento == '3':
       return 7.00
+      soma += 7.00
     elif acompanhamento == '4':
       return 3.00
+      soma += 3.00
     elif acompanhamento == '0':
       break
-    else:
-      print('digitou errado')
+    elif acompanhamento != '':
+      print('codigo invalido digite novamente')
       continue
-    Acumulador += 1
-    Soma += 1
+    else :
+      continue
+      Acumulador += 1
+    
 
       
 
