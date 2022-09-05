@@ -6,7 +6,8 @@ def volumefeijoada():
       if volume_ml < 300 or volume_ml > 5000:
         print('não aceitamos porções menores que 300ml ou maiores que 5L\nDigite a porção novamente')
       elif volume_ml >=300 and volume_ml <= 5000:
-        return volume_ml * 0.08
+        valor_volume = volume_ml * 0.08
+        return 
     except ValueError:
       print('Opção invalida, tente novamente')
       continue
@@ -65,6 +66,6 @@ print('seja bem vindo ao restaurante de feijoada do william paulino mantovani is
 volumefeijoada()         #vai me retornar volumefeijoada
 opcaofeijoada()
 acompanhamentofeijoada()
-total = (porcao * opcao) + acompanhamento
-print('{:.2f} e {} {} total de {}'.format(porcao, opcao, acompanhamento, total))
+total = (volume_ml * opcao_fei) + acompanhamento
+print('{:.2f} e {} {} total de {}'.format(valor_volume, opcao_fei, acompanhamento, total))
 #****************FIM DA MAIN************************************
