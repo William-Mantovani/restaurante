@@ -1,0 +1,78 @@
+#****************COMEÇO DA FUNÇÃO volumeFeijoada****************
+def volumefeijoada():
+  while True:
+    try:
+      volume_ml = int(input('Digite a porção em ML da Feijoada? '))
+      if volume_ml < 300 or volume_ml > 5000:
+        print('não aceitamos porções menores que 300ml ou maiores que 5L\nDigite a porção novamente')
+      elif volume_ml >=300 and volume_ml <= 5000:
+        return volume_ml * 0.08
+    except ValueError:
+      print('Opção invalida, tente novamente')
+      continue
+#****************FINAL DA FUNÇÃO volumeFeijoada****************
+
+#****************COMEÇO DA FUNÇÃO opcaoFeijoada*****************
+def opcaofeijoada():
+  while True:
+    print('Digite a opção de feijoada:')
+    print('Opções:\n| B - Báseica (Feijão + paiol + costelinha) |\n| P - Premium (Feijão + paiol + costelinha + partes do porco) |\n| S - Suprema (Feijão + paiol + costelinha + partes do porco + charque + bacon)|')
+    opcao_fei = input('digite a opção: ')
+    if opcao_fei == 'b':
+      return 1.00
+    elif opcao_fei == 'p':
+      return 1.25
+    elif opcao_fei == 's':
+      return 1.50
+    else:
+      print('Opção não permitida, tente novamente')
+      continue
+      
+
+#****************FIM DA FUNÇÃO opcaoFeijoada********************
+
+#****************COMEÇO DA FUNÇÃO acompanhamentoFeijoada********
+soma = 0
+Acumulador = 1
+def acompanhamentofeijoada():
+  
+  while True:
+    print('Deseja mais acompanhamento? ')
+    print('acompanhamento:\n| 0 - Não desejo mais acompanhamentos  |\n| 1 - 200g de arroz |\n| 2 - 150g de farofa especial |\n| 3 - 100g de couve cozida|\n| 4 - 1 laranja descascada |')
+    acompanhamento = input('digite o acompanhamento: ')
+    segundo_ped = input('deseja outro pedido? (s/n): ')
+    if segundo_ped == 's': 
+      continue
+    elif acompanhamento == '0':
+      break
+    elif acompanhamento == '1':
+      return 5.00
+    elif acompanhamento == '2':
+      return 6.00
+    elif acompanhamento == '3':
+      return 7.00
+    elif acompanhamento == '4':
+      return 3.00
+    else:
+      print('digitou errado')
+    Acumulador += 1
+    Soma += 1
+
+  
+
+  
+  
+  
+      
+
+#****************FIM DA FUNÇÃO acompanhamentoFeijoada***********
+
+#****************COMEÇO DA MAIN*********************************
+
+print('seja bem vindo ao restaurante de feijoada do william paulino mantovani isidoro')
+porcao = volumefeijoada()         #vai me retornar volumefeijoada
+opcao = opcaofeijoada()
+acompanhamento = acompanhamentofeijoada()
+total = (porcao * opcao) + acompanhamento
+print('{:.2f} e {} {} total de {}'.format(porcao, opcao, acompanhamento, total))
+#****************FIM DA MAIN************************************
