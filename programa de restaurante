@@ -47,9 +47,7 @@ def acompanhamentofeijoada():
     print('Deseja mais acompanhamento? ')
     print('acompanhamento:\n| 0 - Não desejo mais acompanhamentos  |\n| 1 - 200g de arroz |\n| 2 - 150g de farofa especial |\n| 3 - 100g de couve cozida|\n| 4 - 1 laranja descascada |')
     acompanhamento = input('digite o acompanhamento: ')
-    if acompanhamento == '0':
-      break
-    elif acompanhamento == '1':
+    if acompanhamento == '1':
       return 5.00
     elif acompanhamento == '2':
       return 6.00
@@ -57,11 +55,13 @@ def acompanhamentofeijoada():
       return 7.00
     elif acompanhamento == '4':
       return 3.00
+    elif acompanhamento == '0':
+      break
     else:
       print('digitou errado')
       continue
-  Acumulador += 1
-  Soma += 1
+    Acumulador += 1
+    Soma += 1
 
       
 
